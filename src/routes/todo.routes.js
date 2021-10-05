@@ -16,7 +16,7 @@ router.post("/", async(req, res) => {
     const { title, description } = req.body;
     const todo = new Todo({ title, description });
     await todo.save();
-    res.json("Tarea guardada");
+    res.json("Tarea creada");
 } );
 
 router.put("/:id", async(req, res) => {
